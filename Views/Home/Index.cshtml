@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<div class="text-center mb-5">
+    <h1 class="display-4 fw-bold" style="color: #4e73df;">Hoş Geldiniz</h1>
+    <p class="lead text-muted">Kütüphane Yönetim Sistemi v1.0</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card p-4 text-center">
+            <div class="card-body">
+                <i class="bi bi-bookshelf" style="font-size: 3rem; color: #4e73df;"></i>
+                <h5 class="card-title mt-3">Kitap Arşivi</h5>
+                <p class="card-text">Kütüphanedeki tüm kitapları görüntüle, düzenle veya sil.</p>
+                <a href="/Kitap/Index" class="btn btn-primary">Arşive Git</a>
+            </div>
+        </div>
+    </div>
+    @if (Context.Session.GetString("UserRole") == "Admin")
+    {
+
+    <div class="col-md-4">
+        <div class="card p-4 text-center">
+            <div class="card-body">
+                <i class="bi bi-plus-circle-fill" style="font-size: 3rem; color: #1cc88a;"></i>
+                <h5 class="card-title mt-3">Hızlı Ekle</h5>
+                <p class="card-text">Vakit kaybetmeden sisteme yeni bir kitap girişi yap.</p>
+                <a href="/Kitap/Ekle" class="btn btn-success">Kitap Ekle</a>
+            </div>
+        </div>
+    </div>
+    }
+    <div class="col-md-4">
+        <div class="card p-4 text-center">
+            <div class="card-body">
+                <i class="bi bi-people-fill" style="font-size: 3rem; color: #36b9cc;"></i>
+                <h5 class="card-title mt-3">Biz Kimiz?</h5>
+                <p class="card-text">Bu proje ve geliştirici ekip hakkında bilgi al.</p>
+                <a href="/Home/Hakkimizda" class="btn btn-info text-white">İncele</a>
+            </div>
+        </div>
+    </div>
+</div>

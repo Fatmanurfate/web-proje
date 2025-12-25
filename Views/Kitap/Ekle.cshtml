@@ -1,0 +1,19 @@
+@model KutuphaneWeb.Models.Kitap
+
+<h2>Yeni Kitap Ekle</h2>
+
+<form action="/Kitap/Ekle" method="post">
+    <div class="mb-3">
+        <label>Kitap Adı</label>
+        <input type="text" name="KitapAdi" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label>Yazar</label>
+        <input type="text" name="Yazar" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label>Sayfa Sayısı</label>
+        <input type="number" name="SayfaSayisi" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-success">Kaydet</button>
+</form>
